@@ -1,5 +1,4 @@
 import React from 'react';
-import './WeatherCard.css';
 import { Box, Heading, Text } from '@chakra-ui/react';
 
 interface WeatherCardProps {
