@@ -1,5 +1,5 @@
 export interface WeatherForecast {
-    day: string;
-    maxTemp: number;
-    minTemp: number;
+    date: string;
+    maxTemperature: string;
+    minTemperature: string;
 }

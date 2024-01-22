@@ -5,8 +5,8 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 interface WeatherCardProps {
     index: number;
     day: string;
-    maxTemp: number;
-    minTemp: number;
+    maxTemp: string;
+    minTemp: string;
 }
 
 const WeatherCard: React.FC<WeatherCardProps> = ({ index, day, maxTemp, minTemp }) => {

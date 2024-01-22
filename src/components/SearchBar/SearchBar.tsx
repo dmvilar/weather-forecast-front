@@ -3,9 +3,10 @@ import { Input, Button, Flex } from '@chakra-ui/react';
 
 interface SearchBarProps {
     onSearch: (address: string) => void;
+    isLoading: boolean;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading }) => {
     const [address, setAddress] = useState('');
 
     const handleSearch = () => {
@@ -20,7 +21,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 onChange={(e) => setAddress(e.target.value)} 
                 marginRight="2"
             />
-            <Button colorScheme="blue" onClick={handleSearch}>
+            <Button colorScheme="blue" onClick={handleSearch} isLoading={isLoading}>
                 Search
             </Button>
         </Flex>
