@@ -42,9 +42,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <Box>
+    <Box marginBottom={'1rem'}>
       <Flex justifyContent={"center"} paddingTop={'1rem'}>
-        <Heading>7 day Weather Forecast</Heading>
+        <Heading>7 Day Weather Forecast</Heading>
       </Flex>
       <SearchBar onSearch={handleSearch} isLoading={isLoading} />
       {isAlertVisible && (
