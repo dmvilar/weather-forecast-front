@@ -43,15 +43,17 @@ const Home: React.FC = () => {
 
   return (
     <Box>
-      <Flex justifyContent={"center"}>
+      <Flex justifyContent={"center"} paddingTop={'1rem'}>
         <Heading>7 day Weather Forecast</Heading>
       </Flex>
       <SearchBar onSearch={handleSearch} isLoading={isLoading} />
       {isAlertVisible && (
-        <Alert status="error">
-          <AlertIcon />
-          <AlertDescription>{errorMessage}</AlertDescription>
-        </Alert>
+        <Flex justifyContent={'center'}>
+          <Alert status="error" w={'80%'}>
+            <AlertIcon />
+            <AlertDescription>{errorMessage}</AlertDescription>
+          </Alert>
+        </Flex>
       )}
       <WeatherList forecasts={weatherData} />
     </Box>
